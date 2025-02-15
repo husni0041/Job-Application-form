@@ -1,0 +1,97 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+    background-color: #ccc;
+    font-family: Arial, sans-serif; /* Added font-family for consistency */
+}
+
+/* Container for the Form */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Apply Box Styling (form container) */
+.apply_box {
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.1); /* Fixed shadow opacity */
+    border-radius: 10px;
+}
+
+/* Small Title Styling */
+.title_small {
+    font-size: 14px; /* Adjusted for better readability */
+    color: #777; /* Added color for the small title */
+}
+
+/* Form Container Layout using CSS Grid */
+.form_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min-width for better responsiveness */
+    gap: 15px; /* Added gap between form controls */
+    padding: 10px;
+}
+
+/* Styling for Form Controls (inputs, labels, etc.) */
+.form_control {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Fields and Textarea */
+input, select, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button Container Styling */
+.button_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Submit Button Styling */
+button {
+    padding: 12px 20px;
+    background-color: #007BFF; /* Added a blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Hover effect for the button */
+}
+
+/* Add responsiveness to make the form more mobile-friendly */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .apply_box {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .form_container {
+        grid-template-columns: 1fr; /* Stack form fields vertically on smaller screens */
+    }
+}
